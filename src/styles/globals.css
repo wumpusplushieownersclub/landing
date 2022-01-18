@@ -1,5 +1,3 @@
-@import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended);
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +8,9 @@ body {
     margin: 0;
     height: 100vh;
     width: 100%;
-    font-family: "Monument Extended", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: "MonumentExtended-Ultrabold";
+    /* font-family: "Monument Extended", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
     overflow: hidden;
 }
 

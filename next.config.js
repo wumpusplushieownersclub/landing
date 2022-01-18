@@ -3,7 +3,9 @@ const nextConfig = {
     reactStrictMode: true,
 };
 
-module.exports = {
+const withFonts = require("next-fonts");
+
+module.exports = withFonts({
     ...nextConfig,
     async redirects() {
         return [
@@ -14,4 +16,4 @@ module.exports = {
             },
         ];
     },
-};
+});

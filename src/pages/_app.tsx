@@ -1,3 +1,4 @@
+import FontStyle from "../fonts";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <meta property="twitter:image:width" content="1200" />
                 <meta property="twitter:image:height" content="1200" />
             </Head>
+            <FontStyle />
             <Component {...pageProps} />
         </>
     );

@@ -40,26 +40,26 @@ const Home: NextPage = () => {
                 className="md:p-[5rem] w-full h-screen flex flex-col items-center md:items-start justify-center md:justify-start"
             >
                 <motion.div
-                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
+                    className="h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
                     variants={HeaderVariants}
                 >
                     WUMPUS
                 </motion.div>
                 <motion.div
-                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
+                    className="h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
                     style={{ WebkitTextStroke: "2px #fff" }}
                     variants={HeaderVariants}
                 >
                     PLUSHIE
                 </motion.div>
                 <motion.div
-                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
+                    className="h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
                     variants={HeaderVariants}
                 >
                     OWNERS
                 </motion.div>
                 <motion.div
-                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
+                    className="h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
                     style={{ WebkitTextStroke: "2px #fff" }}
                     variants={HeaderVariants}
                 >

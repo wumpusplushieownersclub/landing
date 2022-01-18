@@ -3,16 +3,41 @@ import Head from "next/head";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+const HeaderVariants = {
+    initial: {
+        x: 100,
+        opacity: 0,
+    },
+    load: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.45,
+            ease: [0, 0.75, 0.5, 1],
+        },
+    },
+};
+
 const Home: NextPage = () => {
     return (
         <>
-            <Background />
-            <Page>
-                <Header1>WUMPUS</Header1>
-                <Header2>PLUSHIE</Header2>
-                <Header1>OWNERS</Header1>
-                <Header2>CLUB</Header2>
-                <Button>JOIN NOW</Button>
+            <Background
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 0.8, scale: 1 }}
+                transition={{ duration: 1.5, ease: [0, 0.75, 0.5, 1] }}
+            />
+            <Page initial="initial" animate="load" transition={{ staggerChildren: 0.1 }}>
+                <Header1 variants={HeaderVariants}>WUMPUS</Header1>
+                <Header2 variants={HeaderVariants}>PLUSHIE</Header2>
+                <Header1 variants={HeaderVariants}>OWNERS</Header1>
+                <Header2 variants={HeaderVariants}>CLUB</Header2>
+                <Button
+                    variants={HeaderVariants}
+                    whileHover={{ scale: 0.95, cursor: "pointer" }}
+                    href="https://discord.gg/AGBgnVQTAm"
+                >
+                    JOIN NOW
+                </Button>
             </Page>
         </>
     );
@@ -20,7 +45,7 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const Page = styled.div`
+const Page = styled(motion.div)`
     width: 100%;
     height: 100vh;
     padding: 5rem;
@@ -39,10 +64,9 @@ const Background = styled(motion.div)`
     background: url("/wumpglow.png");
     background-size: cover;
     z-index: -1;
-    opacity: 0.8;
 `;
 
-const Header1 = styled.div`
+const Header1 = styled(motion.div)`
     font-family: Monument Extended;
     font-size: 6rem;
     height: 6rem;
@@ -51,7 +75,7 @@ const Header1 = styled.div`
     z-index: 5;
 `;
 
-const Header2 = styled.div`
+const Header2 = styled(motion.div)`
     font-family: Monument Extended;
     font-size: 6rem;
     height: 6rem;
@@ -62,7 +86,7 @@ const Header2 = styled.div`
     z-index: 5;
 `;
 
-const Button = styled.div`
+const Button = styled(motion.a)`
     margin-top: 8rem;
     background: #fff;
     color: #000;

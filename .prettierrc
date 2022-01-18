@@ -1,6 +1,6 @@
 {
     "quoteProps": "consistent",
-    "printWidth": 120,
+    "printWidth": 200,
     "bracketSpacing": true,
     "singleQuote": false,
     "useTabs": false,

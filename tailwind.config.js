@@ -2,7 +2,7 @@ module.exports = {
     content: ["./src/**/*.{ts,tsx,js,jsx}"],
     theme: {
         fontFamily: {
-            monument: ["Monument Extended", "sans-serif"],
+            monument: ["MonumentExtended-Ultrabold", "sans-serif"],
         },
     },
     plugins: [],

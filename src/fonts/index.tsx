@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 import MonumentExtendedUltraBold from "./MonumentExtended-Ultrabold.woff2";
 
-export default createGlobalStyle`
+export const FontStyle = createGlobalStyle`
     @font-face {
         font-family: 'MonumentExtended-Ultrabold';
         src: local('MonumentExtended-Ultrabold'),

@@ -21,16 +21,15 @@ const HeaderVariants = {
 const Home: NextPage = () => {
     return (
         <div className="w-full h-screen flex items-center justify-center">
-            <motion.img
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.8 }}
                 transition={{ duration: 1.5, ease: [0, 0.75, 0.5, 1] }}
-                className="fixed h-screen w-auto 2xl:w-full 2xl:h-auto z-[-1] object-cover"
-                src="/wumpglow.png"
+                className="fixed h-screen w-screen z-[-1] object-cover"
                 style={{
-                    transform: "translate(-100%, -50%)",
-                    top: "50%",
-                    left: "100%",
+                    background: "url(/wumpglow.png)",
+                    backgroundSize: "cover",
+                    backgroundPosition: "100% 50%",
                 }}
             />
             <motion.div

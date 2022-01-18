@@ -1,0 +1,21 @@
+@import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended);
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Monument Extended", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+    background: #000;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}

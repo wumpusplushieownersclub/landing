@@ -20,81 +20,62 @@ const HeaderVariants = {
 
 const Home: NextPage = () => {
     return (
-        <>
-            <Background
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 0.8, scale: 1 }}
+        <div className="w-full h-screen flex items-center justify-center">
+            <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.8 }}
                 transition={{ duration: 1.5, ease: [0, 0.75, 0.5, 1] }}
+                className="fixed h-screen w-auto 2xl:w-full 2xl:h-auto z-[-1] object-cover"
+                src="/wumpglow.png"
+                style={{
+                    transform: "translate(-100%, -50%)",
+                    top: "50%",
+                    left: "100%",
+                }}
             />
-            <Page initial="initial" animate="load" transition={{ staggerChildren: 0.1 }}>
-                <Header1 variants={HeaderVariants}>WUMPUS</Header1>
-                <Header2 variants={HeaderVariants}>PLUSHIE</Header2>
-                <Header1 variants={HeaderVariants}>OWNERS</Header1>
-                <Header2 variants={HeaderVariants}>CLUB</Header2>
-                <Button
+            <motion.div
+                initial="initial"
+                animate="load"
+                transition={{ staggerChildren: 0.1 }}
+                className="md:p-[5rem] w-full h-screen flex flex-col items-center md:items-start justify-center md:justify-center"
+            >
+                <motion.div
+                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
+                    variants={HeaderVariants}
+                >
+                    WUMPUS
+                </motion.div>
+                <motion.div
+                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
+                    style={{ WebkitTextStroke: "2px #fff" }}
+                    variants={HeaderVariants}
+                >
+                    PLUSHIE
+                </motion.div>
+                <motion.div
+                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-white tracking-wider select-none"
+                    variants={HeaderVariants}
+                >
+                    OWNERS
+                </motion.div>
+                <motion.div
+                    className="font-monument h-[3.5rem] md:h-[6rem] text-[3rem] md:text-[6rem] text-transparent tracking-wider select-none"
+                    style={{ WebkitTextStroke: "2px #fff" }}
+                    variants={HeaderVariants}
+                >
+                    CLUB
+                </motion.div>
+                <motion.a
                     variants={HeaderVariants}
                     whileHover={{ scale: 0.95, cursor: "pointer" }}
                     href="https://discord.gg/AGBgnVQTAm"
+                    className="rounded-full px-6 md:px-10 py-4 md:py-5 text-[1.5rem] md:text-[1.75rem] flex items-center justify-center mt-[4rem] md:mt-[8rem] text-black bg-white"
                 >
                     JOIN NOW
-                </Button>
-            </Page>
-        </>
+                </motion.a>
+            </motion.div>
+        </div>
     );
 };
 
 export default Home;
-
-const Page = styled(motion.div)`
-    width: 100%;
-    height: 100vh;
-    padding: 5rem;
-    z-index: 5;
-
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-`;
-
-const Background = styled(motion.div)`
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background: url("/wumpglow.png");
-    background-size: cover;
-    z-index: -1;
-`;
-
-const Header1 = styled(motion.div)`
-    font-family: Monument Extended;
-    font-size: 6rem;
-    height: 6rem;
-    color: #fff;
-    letter-spacing: 0.4rem;
-    z-index: 5;
-`;
-
-const Header2 = styled(motion.div)`
-    font-family: Monument Extended;
-    font-size: 6rem;
-    height: 6rem;
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 2px #fff;
-    text-stroke: 2px #fff;
-    letter-spacing: 0.4rem;
-    z-index: 5;
-`;
-
-const Button = styled(motion.a)`
-    margin-top: 8rem;
-    background: #fff;
-    color: #000;
-    width: 18rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    border-radius: 20rem;
-`;

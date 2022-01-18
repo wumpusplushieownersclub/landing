@@ -12,7 +12,12 @@ module.exports = withFonts({
             {
                 source: "/github",
                 destination: "https://github.com/wumpusplushieownersclub",
-                permanent: true,
+                permanent: false,
+            },
+            {
+                source: "/discord",
+                destination: "https://discord.gg/AGBgnVQTAm",
+                permanent: false,
             },
         ];
     },

@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                 <motion.a
                     variants={HeaderVariants}
                     whileHover={{ scale: 0.95, cursor: "pointer" }}
-                    href="https://discord.gg/AGBgnVQTAm"
+                    href="/discord"
                     className="rounded-full px-6 md:px-10 py-4 md:py-5 text-[1.5rem] md:text-[1.75rem] flex items-center justify-center mt-[4rem] md:mt-[8rem] text-black bg-white"
                 >
                     JOIN NOW

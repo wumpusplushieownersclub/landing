@@ -64,7 +64,7 @@ const Home: NextPage = () => {
                     variants={HeaderVariants}
                     whileHover={{ scale: 0.95, cursor: "pointer" }}
                     href="/discord"
-                    className="rounded-full px-6 md:px-10 py-4 md:py-5 text-[1.5rem] md:text-[1.75rem] flex items-center justify-center mt-[4rem] md:mt-[8rem] text-black bg-white"
+                    className="rounded-full px-6 md:px-10 py-4 md:py-5 text-[1.5rem] md:text-[1.75rem] flex items-center justify-center mt-[4rem] md:mt-[8rem] text-black bg-white hover:text-white hover:bg-transparent hover:border-2 hover hover:border-white hover:transition-all"
                 >
                     JOIN NOW
                 </motion.a>
